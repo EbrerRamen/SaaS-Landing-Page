@@ -1,0 +1,290 @@
+/* ================= DESIGN SYSTEM ================= */
+:root {
+  --primary: #4f46e5;
+  --primary-light: #6366f1;
+  --bg: #0f172a;
+  --surface: #111827;
+  --card: #1e293b;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #334155;
+
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  /* Consistent spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* Section spacing consistency */
+section {
+  padding: var(--space-lg) 0;
+}
+
+/* Typography */
+h1, h2, h3 {
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: var(--space-md);
+  font-size: 2rem;
+}
+
+/* ================= NAVBAR ================= */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* ================= BUTTONS ================= */
+.btn-primary {
+  background: var(--primary);
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: var(--shadow);
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--primary-light);
+}
+
+.btn-secondary {
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95)),
+    url("https://source.unsplash.com/1600x900/?dashboard,technology")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: var(--space-sm);
+}
+
+.hero-sub {
+  color: var(--muted);
+  margin-bottom: var(--space-md);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  background: var(--surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-md);
+}
+
+.card {
+  background: var(--card);
+  padding: var(--space-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+/* ================= PORTFOLIO ================= */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.filters button {
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.filters .active {
+  background: var(--primary);
+  color: white;
+  border: none;
+}
+
+.portfolio-items .item {
+  background: var(--card);
+  padding: var(--space-sm);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.portfolio-items img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* ================= CONTACT ================= */
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: white;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--card);
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}

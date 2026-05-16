@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowSync SaaS</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">FlowSync</div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Features</a></li>
+                <li><a href="#portfolio">Use Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <h1>Streamline Your Workflow with FlowSync</h1>
+            <p class="hero-sub">
+                All-in-one productivity platform to manage tasks, teams, and projects effortlessly.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#contact" class="btn-primary">Start Free Trial</a>
+                <a href="#services" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section id="services" class="services container">
+        <h2>Core Features</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Task Automation</h3>
+                <p>Automate repetitive workflows and save up to 40% of your team's time.</p>
+            </div>
+
+            <div class="card">
+                <h3>Real-time Collaboration</h3>
+                <p>Collaborate with your team instantly using shared dashboards and live updates.</p>
+            </div>
+
+            <div class="card">
+                <h3>Analytics Dashboard</h3>
+                <p>Track performance with detailed reports and actionable insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PORTFOLIO ================= -->
+    <section id="portfolio" class="portfolio container">
+        <h2>Use Cases</h2>
+
+        <div class="filters">
+            <button data-filter="all" class="active">All</button>
+            <button data-filter="web">Startups</button>
+            <button data-filter="branding">Enterprises</button>
+        </div>
+
+        <div class="grid portfolio-items">
+            <div class="item web">
+                <img src="https://source.unsplash.com/400x300/?startup,office" alt="">
+                <p>Startup Workflow Automation</p>
+            </div>
+
+            <div class="item branding">
+                <img src="https://source.unsplash.com/400x300/?corporate,team" alt="">
+                <p>Enterprise Project Management</p>
+            </div>
+
+            <div class="item web">
+                <img src="https://source.unsplash.com/400x300/?teamwork,app" alt="">
+                <p>Remote Team Collaboration</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact" class="contact container">
+        <h2>Request a Demo</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="John Doe" required />
+            <input type="email" placeholder="john@company.com" required />
+            <textarea placeholder="Tell us about your workflow needs..." required></textarea>
+            <button type="submit" class="btn-primary">Request Demo</button>
+        </form>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p>© 2026 FlowSync Inc. | Built for demonstration purposes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
